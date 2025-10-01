@@ -9,6 +9,5 @@ int maxBottlesDrunk(int numBottles, int numExchange)
         totalDrunk++;
         emptyBottles++;
     }
-    
     return (totalDrunk);
 }
