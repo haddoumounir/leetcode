@@ -1,12 +1,13 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        
-        seen = {}
-        for c in s:
-            seen[c] = seen.get(c,0) +1
-        
+
+        map = {}
+        for i in range(len(s)):
+            map[s[i]] = map.get(s[i],0) + 1
+
         for k,v in enumerate(s):
-            if(seen[v] == 1):
+            if map[v] == 1:
                 return k
-        
         return -1
+
+        
