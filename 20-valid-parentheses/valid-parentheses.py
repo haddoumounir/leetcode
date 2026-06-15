@@ -1,7 +1,8 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        ctp = {'}':'{',']':'[',')':'('}
+        ctp = {']':'[','}':'{',')':'('}
+
         for c in s:
             if c in ctp:
                 if stack and stack[-1] == ctp[c]:
@@ -10,5 +11,4 @@ class Solution:
                     return False
             else:
                 stack.append(c)
-    
-        return len(stack) == 0 
+        return len(stack) == 0
