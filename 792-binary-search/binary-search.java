@@ -3,11 +3,11 @@ class Solution {
 
         if(nums.length == 0)
             return -1;
-        if(nums.length == 1)
-            if(nums[0] == target)
-                return 0;
-            else
-                return -1;
+        // if(nums.length == 1)
+        //     if(nums[0] == target)
+        //         return 0;
+        //     else
+        //         return -1;
         int r = nums.length -1;
         int l = 0;
         while (l <=r)
