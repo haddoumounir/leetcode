@@ -3,12 +3,15 @@ class Solution:
         stack = []
         ctp = {']':'[','}':'{',')':'('}
 
-        for c in s:
-            if c in ctp:
-                if stack and stack[-1] == ctp[c]:
+        for i in range(len(s)):
+            if s[i] in ctp:
+                if stack and stack[-1] == ctp[s[i]]:
                     stack.pop()
                 else:
                     return False
+            
             else:
-                stack.append(c)
+                stack.append(s[i])
+        
         return len(stack) == 0
+        
