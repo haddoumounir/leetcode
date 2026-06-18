@@ -9,9 +9,9 @@ class Solution {
             if(nums[med] == target)
                 return med;
             if(nums[med] < target)
-                l++;
+                l = med+1;
             else
-                r--;
+                r = med -1;
 
         }
         return -1;
